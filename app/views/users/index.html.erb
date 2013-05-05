@@ -1,11 +1,10 @@
-<h1>Listing users</h1>
+<h2>Listing users</h2>
 
 <table style="width: 60%">
 	<thead>
 		<tr>
 			<th>Username</th>
 			<th>Email</th>
-			<th>Password</th>
 			<th></td>
 		</tr>
 	</thead>
@@ -14,12 +13,9 @@
 <tr>
 	<td style="text-align: center"><%= user.username %></td>
 	<td style="text-align: center"><%= user.email %></td>
-	<td style="text-align: center"><%= user.password %></td>
 	<td style="text-align: center"><%= link_to "View profile", user_path(user) %></td>
 </tr>
 <%- end -%>
 </table>
 <br>
 <%= link_to "New user", new_user_path %>
-
-

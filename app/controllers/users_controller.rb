@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 	def index
 		@users = User.all
-		@singur = User.find(1)
 	end
 
 	def view

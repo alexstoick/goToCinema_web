@@ -1,9 +1,7 @@
 CinemaWeb::Application.routes.draw do
 
-get "users/index"
-get "users/view"
-get "users/new"
-
+match 'login/', :to => "sessions#create", :via => :post
+match 'login/', :to => "sessions#new", :as => :login
 match 'user/', :to => "users#create", :via => :post
 match 'user/', :to => "users#index", :as => :users
 match 'user/new', :to => "users#new", :as => :new_user
