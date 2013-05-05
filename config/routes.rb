@@ -1,5 +1,6 @@
 CinemaWeb::Application.routes.draw do
 
+match 'logout/', :to => "sessions#destroy", :as => :logout
 match 'login/', :to => "sessions#create", :via => :post
 match 'login/', :to => "sessions#new", :as => :login
 match 'user/', :to => "users#create", :via => :post
