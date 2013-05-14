@@ -1,0 +1,43 @@
+<p>
+  <b>Regizor:</b>
+  <%= @movie.regizor %>
+</p>
+
+<p>
+  <b>Titluen:</b>
+  <%= @movie.titluEn %>
+</p>
+
+<p>
+  <b>Titluro:</b>
+  <%= @movie.titluRo %>
+</p>
+
+<p>
+  <b>Gen:</b>
+  <%= @movie.gen %>
+</p>
+
+<p>
+  <b>Actori:</b>
+  <%= @movie.actori %>
+</p>
+
+<p>
+  <b>Nota:</b>
+  <%= @movie.nota %>
+</p>
+
+<table class="table">
+	<thead>
+		<th> Place </th>
+		<th> Hour </th>
+	</thead>
+
+<%- @movie.showtimes.each do |showtime| -%>
+<tr>
+	<td><%= showtime.place %></td>
+	<td><%= showtime.hour %></td>
+</tr>
+<%- end -%>
+</table>

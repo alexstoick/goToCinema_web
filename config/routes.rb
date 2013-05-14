@@ -8,6 +8,14 @@ match 'user/', :to => "users#index", :as => :users
 match 'user/new', :to => "users#new", :as => :new_user
 match 'user/:id', :to => "users#view", :as => :user
 
+match 'user/:id/messages', :to => "users#messages", :as => :user_message
+match 'user/:id/lists', :to => "users#lists", :as => :user_list
+match 'user/:id/wall', :to => "users#wall", :as => :user_wall
+
+
+match '/movies', :to => "movies#index", :as => :movies
+match '/movies/:id', :to => "movies#show", :as => :movie
+
 root :to => "users#index"
 # The priority is based upon order of creation:
 # first created -> highest priority.
