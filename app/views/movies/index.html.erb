@@ -2,6 +2,7 @@
 
 <table class="table">
   <tr>
+  	<th></th>
     <th>Titlu</th>
     <th>Gen</th>
     <th>Actori</th>
@@ -11,6 +12,7 @@
 
 <% @movies.each do |movie| %>
   <tr>
+  	<td> <img src="<%= movie.image %>" /> </td>
     <td><%= movie.titluEn %></td>
     <td><%= movie.gen %></td>
     <td><%= movie.actori %></td>
