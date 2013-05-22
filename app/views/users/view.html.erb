@@ -9,6 +9,7 @@
 		<p> <b> Date of Birth </b> <%= @user.DOB %></p>
 		<p ><b> Email: </b> <%= @user.email %></p>
 		<p> <b> Name: </b> <%= @user.fullname %> </p>
+		<p> <%= link_to "Wall", user_wall_path( @user ) %>
 	</div>
 </div>
 <br>

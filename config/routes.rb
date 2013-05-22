@@ -11,6 +11,7 @@ match 'user/:id', :to => "users#view", :as => :user
 match 'user/:id/messages', :to => "users#messages", :as => :user_message
 match 'user/:id/lists', :to => "users#lists", :as => :user_list
 match 'user/:id/wall', :to => "users#wall", :as => :user_wall
+match 'user/:id/friends', :to => "users#friends", :as => :user_friends
 
 
 match '/movies', :to => "movies#index", :as => :movies

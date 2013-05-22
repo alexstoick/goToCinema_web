@@ -1,32 +1,10 @@
-
-<table class="table">
-	<thead>
-		<th> Title post </th>
-		<th> Content post </th>
-		<th> Sender </th>
-	</thead>
-
 <%- @user.wall_posts.each do |post| -%>
-<tr>
-	<td> <%= post.title %> </td>
-	<td> <%= post.content %> </td>
-	<td> <%= post.sender.fullname %> </td>
-</tr>
-<%- end -%>
+	<div class="row-fluid" style="margin-bottom: 5px;">
+		<img src="<%= post.sender.image %>" class="span2">
+		<h3> <%= link_to post.sender.fullname , user_path( post.sender )%> </h3>
 
-</table>
-
-
-<%- @user.wall_posts.each do |post| -%>
-	<div class="row" style="margin-bottom: 5px;">
-		<div class="span2">
-			<img src="<%= post.sender.image %>" width="100%" height="100%"/>
-		</div>
-		<div class="span7">
-			<h3> <%= post.sender.fullname %> </h3>
-			<p><b> <%= post.title %> </b></p>
-			<p> <%= post.content %> </p>
-		</div>
+		<p><b> <%= post.title %> </b></p>
+		<!-- <p> <%= post.content %> </p> -->
 	</div>
 
 <%- end -%>

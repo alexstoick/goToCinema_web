@@ -1,0 +1,41 @@
+Friends
+
+
+<%- @user.friends.each do |friend|-%>
+
+	<div class="row" style="margin-bottom: 5px;">
+		<div class="span1" style="width: 120px">
+			<img src="<%= friend.image %>"/>
+		</div>
+		<div class="span3">
+			<%= link_to friend.fullname , user_path( friend )%>
+		</div>
+	</div>
+
+
+<%- end -%>
+
+<%- @user.inverse_friends.each do |friend|-%>
+	<div class="row" style="margin-bottom: 5px;">
+		<div class="span3">
+			<img src="<%= friend.image %>" style="width:120px; float:left; margin-right: 10px"/>
+			<%= link_to friend.fullname , user_path( friend )%>
+		</div>
+	</div>
+
+<%- end -%>
+
+
+
+Pending friends
+
+<%- @user.friendships.pending.each do |friendship| -%>
+
+	<div class="row" style="margin-bottom: 5px;">
+		<div class="span3">
+			<img src="<%= friendship.friend.image %>" style="width:120px; float:left; margin-right: 10px"/>
+			<%= link_to friendship.friend.fullname , user_path( friendship.friend )%>
+		</div>
+	</div>
+
+<%- end -%>
