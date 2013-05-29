@@ -1,0 +1,27 @@
+
+
+<%- @lists.each do |list| -%>
+
+	<h3><%= list.name.capitalize %> </h3>
+
+
+
+	<table class="table">
+		<tr>
+			<th></th>
+			<th>Nume</th>
+			<th></th>
+		</tr>
+
+		<% list.movies.each do |movie| %>
+			<tr>
+				<td> <img src="<%= movie.image %>" /> </td>
+				<td><%= movie.titluEn %></td>
+				<td><%= link_to 'Show', movie %></td>
+			</tr>
+		<% end %>
+	</table>
+
+<%- end -%>
+
+<br />

@@ -23,10 +23,6 @@ class UsersController < ApplicationController
 		render :text => "messages"
 	end
 
-	def lists
-		render :text => "lists"
-	end
-
 	def wall
 		@user = User.find ( params[:id] )
 	end
