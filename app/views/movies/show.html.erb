@@ -1,43 +1,45 @@
-<p>
-  <b>Regizor:</b>
-  <%= @movie.regizor %>
-</p>
+<div class="row-fluid">
+	<div class="span2">
+		<img src="<%= @movie.image %>">
+	</div>
+	<div class="span10">
+		<p>
+			<b>Director:</b>
+			<%= @movie.regizor %>
+		</p>
 
-<p>
-  <b>Titluen:</b>
-  <%= @movie.titluEn %>
-</p>
+		<p>
+			<b>Title:</b>
+			<%= @movie.titluEn %>
+		</p>
 
-<p>
-  <b>Titluro:</b>
-  <%= @movie.titluRo %>
-</p>
 
-<p>
-  <b>Gen:</b>
-  <%= @movie.gen %>
-</p>
+		<p>
+			<b>Genre:</b>
+			<%= @movie.gen %>
+		</p>
 
-<p>
-  <b>Actori:</b>
-  <%= @movie.actori %>
-</p>
+		<p>
+			<b>Actors:</b>
+			<%= @movie.actori %>
+		</p>
 
-<p>
-  <b>Nota:</b>
-  <%= @movie.nota %>
-</p>
-
+		<p>
+			<b>Raiting:</b>
+			<%= @movie.nota %>
+		</p>
+	</div>
+</div>
 <table class="table">
 	<thead>
-		<th> Place </th>
-		<th> Hour </th>
+		<th>Cinema</th>
+		<th>Hour</th>
 	</thead>
 
-<%- @movie.showtimes.each do |showtime| -%>
-<tr>
-	<td><%= showtime.place %></td>
-	<td><%= showtime.hour %></td>
-</tr>
-<%- end -%>
+	<%- @movie.showtimes.each do |showtime| -%>
+	<tr>
+		<td><%= showtime.place %></td>
+		<td><%= showtime.hour %></td>
+	</tr>
+	<%- end -%>
 </table>

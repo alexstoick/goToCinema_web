@@ -1,13 +1,22 @@
-<h1> Log in </h1>
+<h1>Log in</h1>
+<form class="form-horizontal" action="/login/" method="post">
+	<div class="control-group">
+		<label class="control-label" for="inputEmail">Username</label>
+		<div class="controls">
+			<%= text_field_tag :username, params[:username] %>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" for="inputPassword">Password</label>
+		<div class="controls">
+			<%= password_field_tag :password %>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
+		</div>
+	</div>
+</form>
 
-  <%= form_tag login_path do  %>
-
-      <%= label_tag :username %>
-      <%= text_field_tag :username, params[:username] %>
-
-      <%= label_tag :password %>
-      <%= password_field_tag :password %>
-
-      <%= submit_tag "Sign in", class: "btn btn-large btn-primary" %>
-    <% end %>
 

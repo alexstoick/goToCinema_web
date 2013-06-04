@@ -19,7 +19,7 @@ match '/movies', :to => "movies#index", :as => :movies
 match '/movies/:id', :to => "movies#show", :as => :movie
 
 
-root :to => "users#index"
+root :to => "movies#index"
 # The priority is based upon order of creation:
 # first created -> highest priority.
 

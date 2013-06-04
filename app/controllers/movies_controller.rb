@@ -1,10 +1,16 @@
 class MoviesController < ApplicationController
 
 	def index
+		if ( session[:user_id] == nil )
+			redirect_to login_path , notice:"You have to be logged in"
+		end
 		@movies = Movie.all
 	end
 
 	def show
+
+
+
 		@movie = Movie.find(params[:id])
 	end
 

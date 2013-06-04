@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
 			key = Password.create( params[:username]+params[:password] )
 			user.authToken = key
 			user.save!
-			redirect_to root_path, notice: 'Successfully logged in!'
+			redirect_to movies_path, notice: 'Successfully logged in!'
 		else
 			render json: { "loggedIn" => false }
 		end

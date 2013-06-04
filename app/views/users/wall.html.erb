@@ -1,3 +1,20 @@
+
+<h2> <%= @user.username.capitalize %> </h2>
+
+<div class="row">
+	<div class="span3">
+		<img src="<%= @user.image%>"/>
+	</div>
+	<div class="span7">
+		<p> <b> Date of Birth </b> <%= @user.DOB %></p>
+		<p ><b> Email: </b> <%= @user.email %></p>
+		<p> <b> Name: </b> <%= @user.fullname %> </p>
+
+	</div>
+</div>
+<br>
+
+
 <%- @user.wall_posts.each do |post| -%>
 	<div class="row-fluid" style="margin-bottom: 5px;">
 		<img src="<%= post.sender.image %>" class="span2">
